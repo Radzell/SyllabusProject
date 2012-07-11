@@ -1,0 +1,8 @@
+<h1>Document#upload</h1>
+<p>Find me in app/views/document/upload.html.erb</p>
+<%= form_for @document, :url => document_path, :html => { :multipart => true } do |form| %>
+	<%= form.text_field :name, :class => 'input-large' %>
+	<%= form.text_field :description, :class => 'input-large' %>
+	<%= form.file_field :upload %>
+<% end %>
+

@@ -1,7 +1,17 @@
 Syllabusproject::Application.routes.draw do
+  get "document/upload"
+
+  get "document/new"
+
+  get "document/view"
+
+  get "home/index"
+
   devise_for :users
 
   resources :users
+
+  root :to => "home#index" 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
