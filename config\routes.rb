@@ -1,15 +1,12 @@
-Syllabusproject::Application.routes.draw do
-  get "document/upload"
-
-  get "document/new"
-
-  get "document/view"
+Syllabusproject::Application.routes.draw do 
 
   get "home/index"
-
+  
   devise_for :users
 
   resources :users
+  
+  resources :document
 
   root :to => "home#index" 
 
